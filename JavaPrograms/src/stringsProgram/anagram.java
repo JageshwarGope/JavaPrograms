@@ -16,6 +16,8 @@ public class anagram {
 		}
 	}
 	
+	// stringToASCII  method
+	
 	public static int stringToASCII(String s) {
 		
 		int ascii = 0;
