@@ -22,7 +22,7 @@ public class anagram {
 		
 		int ascii = 0;
 		for(int i=0; i<s.length(); i++) {
-			int ch = (int) s.charAt(i);  // or int num = (int) s.charAt(i);
+			char ch = s.charAt(i);  // or int num = (int) s.charAt(i);
 			int num = (char) ch;
 			ascii = ascii+num;
 		}
@@ -46,7 +46,30 @@ public class anagram {
 		}
 	}
 	
-
+	public static boolean  anagramProgram3(String s1, String s2) {
+		
+		int[] n = new int[256];
+		
+		for(int i = 0; i<s1.length(); i++) {
+			n[s1.charAt(i)]++;
+		}
+		
+		for(int i = 0; i<s2.length(); i++) {
+			n[s2.charAt(i)]--;
+		}
+		
+		for(int a : n) {
+			if(a != 0) {
+				return false;
+			} 
+		}
+		
+		return true;
+			
+		
+		
+	}
+ 
 	public static void main(String[] args) {
 		
 		String s1 = "abc";
@@ -54,6 +77,12 @@ public class anagram {
 		
 		anagramProgram(s1,s2);
 		anagramProgram2(s1,s2);
+		boolean res = anagramProgram3(s1,s2);
+		if(res) {
+			System.out.println("Anagram");
+		} else {
+			System.out.println("Not Anagram");
+		}
 	}
 
 }
