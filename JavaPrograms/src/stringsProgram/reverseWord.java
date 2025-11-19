@@ -48,7 +48,7 @@ public class reverseWord {
 		
 		
 		
-		String[] st = s.trim().split(" ");
+		String[] st = s.trim().split(" ");   //  st = ["I", "am", "the", "boss"]
 		reverseCharacter2(st, 0, st.length-1);
 		
 		for(String e : st) {

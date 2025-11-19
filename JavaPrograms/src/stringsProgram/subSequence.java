@@ -46,7 +46,7 @@ public class subSequence {
 	public static void main(String[] args) {
 		
 		String seq = "abbcddon";
-		String sub = "acco";
+		String sub = "aco";
 		
 		subSeq(seq, sub);
 		subsequence(seq, sub);

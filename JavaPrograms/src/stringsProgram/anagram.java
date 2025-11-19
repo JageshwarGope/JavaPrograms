@@ -1,4 +1,4 @@
-package stringsProgram;
+ package stringsProgram;
 
 import java.util.Arrays;
 
@@ -23,7 +23,7 @@ public class anagram {
 		int ascii = 0;
 		for(int i=0; i<s.length(); i++) {
 			char ch = s.charAt(i);  // or int num = (int) s.charAt(i);
-			int num = (char) ch;
+			int num = ch;
 			ascii = ascii+num;
 		}
 		
@@ -65,7 +65,6 @@ public class anagram {
 		}
 		
 		return true;
-			
 		
 		
 	}

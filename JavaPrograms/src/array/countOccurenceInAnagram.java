@@ -39,18 +39,25 @@ public class countOccurenceInAnagram {
 	
 	private static void countOccAnagram2(String st, String pattern) {
 		
-		char[] stChar = st.toCharArray();
 		char[] pChar = pattern.toCharArray();
+		int k = pattern.length();
+		Arrays.sort(pChar);
 
 		int count = 0;
-		
-		for(int i = 0; i<st.length(); i++ ) {
-			for(int j = i; j<pattern.length(); j++) {
-				if(pattern.contains(st.charAt(i))){
-					
-				}
+		for(int i = 0; i<=st.length()-3; i++ ) {
+			
+			String sub = st.substring(i, i+k);
+			char[] subb = sub.toCharArray();
+			Arrays.sort(subb);
+			
+			if(Arrays.equals(subb, pChar)) {
+				count++;
 			}
+			
+			
 		}
+		
+		System.out.println(count);
 		
 	
 	}
@@ -63,6 +70,8 @@ public class countOccurenceInAnagram {
 		
 		int result = countOccAnagram(st,pattern);
 		System.out.println(result);
+		
+		countOccAnagram2(st, pattern);
 
 	}
 
